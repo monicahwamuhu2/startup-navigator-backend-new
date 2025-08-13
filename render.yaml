@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: kenya-startup-navigator-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    # Environment variables should be set in Render dashboard, not in code
